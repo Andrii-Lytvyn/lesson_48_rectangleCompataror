@@ -3,14 +3,17 @@
 Написать компаратор, который сравнивает прямоугольники по площади.
 Написать тесты для этого компаратора.*/
 public class Rectangle {
-  private final int width;
-  private final int height;
+  private final Integer width;
+  private final Integer height;
   public Rectangle(int width, int height)
   {
     this.width = width;
     this.height=height;
   }
-
+  public Integer square ()
+  {
+   return width*height;
+  }
 
 
   public int getWidth() {
@@ -21,4 +24,8 @@ public class Rectangle {
     return height;
   }
 
+  @Override
+  public String toString() {
+    return "width:" + width +" height:" + height + " square: " + square();
+  }
 }
